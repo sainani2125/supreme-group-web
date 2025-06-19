@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { Play, Pause } from 'lucide-react'
+import Image from 'next/image'
 
 interface VehicleOption {
   id: string
@@ -247,7 +248,7 @@ const VehicleShowcase = () => {
                       margin: 0,
                       padding: 0
                     }}
-                    onError={(e) => {
+                    onError={() => {
                       console.error('Video failed to load:', getVideoSource())
                     }}
                     onLoadedData={() => {
@@ -279,13 +280,22 @@ const VehicleShowcase = () => {
                           ? 'border-cyan-400 bg-cyan-400/10 shadow-lg shadow-cyan-400/20' 
                           : 'border-gray-600 group-hover:border-gray-400'
                       }`}>
-                        <img 
+                        <Image
                           src={getImageSource(option.id)} 
                           alt={option.name}
+                          width={400}
+                          height={300}
                           className="w-full h-full object-cover"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = '/assets/images/complete-body.png';
+                          onError={() => {
+                            console.error('Image failed to load for:', option.name);
                           }}
+                          onLoadingComplete={(result) => {
+                            if (result.naturalWidth === 0) {
+                              // Handle broken image case
+                              console.error('Broken image detected');
+                            }
+                          }}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
                       <span className="text-xs lg:text-sm font-medium whitespace-nowrap text-center">
