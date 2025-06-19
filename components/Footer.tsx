@@ -54,7 +54,7 @@ const Footer = () => {
             <div className="flex  mb-1">
               <div className="w-36 h-24 relative">
                 <Image
-                  src="/assets/images/supreme_logo.png"
+                  src="/assets/images/Supreme_logo.png"
                   alt="Supreme Group"
                   fill
                   className="object-contain"
