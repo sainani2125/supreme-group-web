@@ -6,24 +6,23 @@ import { Play, Pause } from 'lucide-react'
 interface VehicleOption {
   id: string
   name: string
-  icon: string
   description: string
 }
 
 // Passenger vehicle options (5 videos)
 const passengerOptions: VehicleOption[] = [
-  { id: 'complete-body', name: 'Complete body', icon: '🚗', description: 'Full vehicle assembly' },
-  { id: 'front', name: 'Front', icon: '🔧', description: 'Front section components' },
-  { id: 'cabin', name: 'Cabin', icon: '🪑', description: 'Interior cabin solutions' },
-  { id: 'trunk', name: 'Trunk', icon: '📦', description: 'Rear storage compartment' },
-  { id: 'exterior', name: 'Exterior', icon: '🎨', description: 'External body parts' },
+  { id: 'complete-body', name: 'Complete body', description: 'Full vehicle assembly' },
+  { id: 'front', name: 'Front',  description: 'Front section components' },
+  { id: 'cabin', name: 'Cabin',  description: 'Interior cabin solutions' },
+  { id: 'trunk', name: 'Trunk',  description: 'Rear storage compartment' },
+  { id: 'exterior', name: 'Exterior', description: 'External body parts' },
 ]
 
 // Commercial vehicle options (3 videos)
 const commercialOptions: VehicleOption[] = [
-  { id: 'complete-body', name: 'Complete body', icon: '🚛', description: 'Full commercial vehicle assembly' },
-  { id: 'engine', name: 'Engine', icon: '⚙️', description: 'Engine components and systems' },
-  { id: 'cabin', name: 'Cabin', icon: '🚚', description: 'Commercial cabin solutions' },
+  { id: 'complete-body', name: 'Complete body',  description: 'Full commercial vehicle assembly' },
+  { id: 'engine', name: 'Engine',  description: 'Engine components and systems' },
+  { id: 'cabin', name: 'Cabin', description: 'Commercial cabin solutions' },
 ]
 
 const VehicleShowcase = () => {
