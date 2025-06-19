@@ -2,7 +2,7 @@
 
 A modern, responsive Next.js vehicle showcase with professional UI and seamless contact integration.
 
-🚀 *Live Demo*: [https://supreme-group-web.vercel.app](https://blacksof-task-web.vercel.app/)
+🚀 *Live Demo*: https://blacksof-task-web.vercel.app
 
 ## 🛠 Quick Setup
 
